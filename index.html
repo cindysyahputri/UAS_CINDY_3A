@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Explore Wisata Nusantara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/assets/css/bootstrap.min.css">
+
+<style>
+body{
+  font-family:"Poppins",sans-serif;
+  background:linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f7fafc 45%,
+    #eef3f6 100%
+  );
+  color:#374151;
+  scroll-behavior:smooth;
+}
+
+
+/* NAVBAR */
+.navbar{
+  background:rgba(20,40,30,.95);
+  backdrop-filter:blur(8px);
+}
+.nav-link{
+  color:#ddd !important;
+  margin-left:16px;
+  position:relative;
+}
+.nav-link:hover,
+.nav-link.active{
+  color:#fff !important;
+}
+.nav-link::after{
+  content:"";
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  width:0;
+  height:2px;
+  background:#7ed957;
+  transition:.3s;
+}
+.nav-link:hover::after,
+.nav-link.active::after{
+  width:100%;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(20,40,30,.65),rgba(20,40,30,.65)),
+  url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  padding:150px 0;
+}
+
+/* SECTION */
+.section-padding{
+  padding:50px 0;
+}
+.section-title{
+  color:#2f5d3f;
+  font-weight:700;
+}
+
+/* CARD */
+.card{
+  border:none;
+  border-radius:18px;
+  transition:.3s;
+  overflow:hidden;
+}
+.card img.main-img{
+  height:220px;
+  object-fit:cover;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+/* CAROUSEL */
+.carousel-custom{
+  max-width:900px;
+}
+.carousel-img{
+  height:340px;
+  object-fit:cover;
+}
+
+/* SECTION TESTIMONI */
+.testimoni-section {
+  padding: 100px 0;
+  background: rgba(20,40,30,.95);
+}
+
+.testimoni-section .divider {
+  width: 80px;
+  height: 4px;
+  background: rgba(20,40,30,.95);
+  margin: 16px auto 0;
+  border-radius: 10px;
+}
+
+.testimoni-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(20,40,30,.95);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+}
+
+.testimoni-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.testimoni-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #f5f9f7;
+}
+
+.testimoni-card h5 {
+  color: #ffffff;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.testimoni-card p {
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* FORM */
+.form-control{
+  border-radius:12px;
+  padding:12px;
+}
+.btn-success{
+  border-radius:12px;
+  padding:12px;
+  font-weight:600;
+}
+
+/* PESAN PAKET */
+.order-section{
+  background:rgba(20,40,30,.95);
+  border-radius:20px;
+  padding:50px;
+  color:#fff;
+}
+.order-section label{
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#fefefe;
+  margin-bottom:6px;
+}
+.order-section .form-control,
+.order-section .form-select{
+  border-radius:12px;
+  border:none;
+  padding:14px;
+}
+.order-section textarea{
+  resize:none;
+}
+.btn-order{
+  background:#1c2e25;
+  color:#fff;
+  border:none;
+  padding:14px 28px;
+  border-radius:14px;
+  font-weight:600;
+  transition:.3s;
+}
+.btn-order:hover{
+  background:#7ed957;
+  color:#1c2e25;
+}
+
+/* FOOTER */
+footer{
+  background:rgba(0, 0, 0, 0.95);
+  color:#ccc;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#home">ExploreWisata</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav ms-auto">
+    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#intro">Tentang</a></li>
+    <li class="nav-item"><a class="nav-link" href="#destinasi">Destinasi</a></li>
+    <li class="nav-item"><a class="nav-link" href="#paket">Paket</a></li>
+    <li class="nav-item"><a class="nav-link" href="#ulasan">Ulasan</a></li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Explore Wisata Nusantara</h1>
+    <p class="lead mt-3">Menjelajahi keindahan alam dan kekayaan wisata Indonesia</p>
+  </div>
+</section>
+
+<!-- TENTANG -->
+<section id="intro" class="section-padding bg-white">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">
+      Jelajahi Wisata Nusantara Bersama Kami
+    </h2>
+
+    <p class="fs-5 mx-auto" style="max-width:900px">
+      Explore Wisata Nusantara adalah platform informasi dan referensi wisata
+      yang membantu Anda menemukan destinasi terbaik di seluruh Indonesia.
+    </p>
+
+    <p class="text-muted mx-auto" style="max-width:900px">
+      Kami menyajikan berbagai jenis wisata mulai dari alam, bahari, hingga
+      budaya yang dikemas secara informatif, modern, dan mudah diakses
+      oleh semua kalangan.
+    </p>
+
+    <p class="mx-auto mt-4" style="max-width:900px">
+      Website ini dirancang untuk memberikan pengalaman eksplorasi wisata
+      yang nyaman, membantu perencanaan perjalanan, serta menjadi sumber
+      inspirasi liburan Anda bersama keluarga, teman, maupun rekan kerja.
+    </p>
+  </div>
+</section>
+
+
+<!-- DESTINASI -->
+<section id="destinasi" class="section-padding">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Jenis Destinasi Wisata</h2>
+  <div class="row g-4">
+
+  <div class="col-md-4">
+    <div class="card shadow">
+      <img src="img/1.JPG" class="main-img">
+    <div class="card-body">
+      <h5 class="fw-bold">Wisata Alam 🌿</h5>
+        <p>Wisata alam menawarkan keindahan lingkungan alami yang masih asri dan jauh dari hiruk-pikuk perkotaan. 
+          Jenis wisata ini mencakup gunung, pantai, air terjun, danau, hutan, hingga taman nasional. Pengunjung dapat menikmati udara segar, 
+          pemandangan indah, serta berbagai aktivitas seperti hiking, camping, snorkeling, atau sekadar bersantai menikmati alam.
+          Wisata alam sangat cocok bagi mereka yang ingin melepas penat dan mencari ketenangan jiwa.</p>
+    </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card shadow">
+      <img src="img/3.JPG" class="main-img">
+    <div class="card-body">
+      <h5 class="fw-bold">Wisata Bahari 🌊</h5>
+      <p>Wisata bahari berfokus pada keindahan laut dan kawasan pesisir. Aktivitas yang ditawarkan antara lain snorkeling, diving, wisata pulau, berlayar, dan menikmati sunset di pantai. 
+        Keindahan terumbu karang dan biota laut menjadi daya tarik utama wisata bahari. 
+        Jenis wisata ini sangat diminati karena memberikan pengalaman petualangan sekaligus keindahan alam bawah laut. Sangat cocok untuk seseorang yang suka dengan keindahan laut.</p>
+    </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card shadow">
+      <img src="img/2.JPG" class="main-img">
+    <div class="card-body">
+      <h5 class="fw-bold">Wisata Budaya 🏛️</h5>
+      <p>Wisata budaya berfokus pada kekayaan tradisi, adat istiadat, dan warisan sejarah suatu daerah. 
+        Contohnya adalah kunjungan ke desa adat, museum, candi, bangunan bersejarah, serta pertunjukan seni tradisional. 
+        Melalui wisata budaya, pengunjung dapat mempelajari sejarah, nilai-nilai kehidupan, serta cara hidup masyarakat setempat. 
+        Jenis wisata ini tidak hanya menghibur, tetapi juga memberikan edukasi dan menambah wawasan.</p>
+    </div>
+    </div>
+  </div>
+ 
+  </section>
+
+<!-- PAKET -->
+<section id="paket" class="section-padding bg-white">
+  <div class="container">
+    <h2 class="section-title text-center mb-3">Paket Wisata Pilihan</h2>
+    <p class="text-center mb-5">Referensi paket perjalanan terbaik.</p>
+
+  <div class="d-flex justify-content-center">
+  <div id="wisataCarousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
+  <div class="carousel-inner rounded shadow">
+
+  <div class="carousel-item active">
+    <img src="https://amanahtransporter.com/wp-content/uploads/2024/04/Paket-Wisata-Bandung.png" class="d-block w-100 carousel-img">
+  </div>
+
+  <div class="carousel-item">
+    <img src="https://www.bandung-tour.com/wp-content/uploads/2022/07/Paket-Wisata-Tour-Bandung-2d1n-700x420.webp" class="d-block w-100 carousel-img">
+  </div>
+
+  <div class="carousel-item">
+    <img src="https://amarthawisata.com/wp-content/uploads/2024/02/paket-wisata-bandung-3-hari-2-malam.jpg" class="d-block w-100 carousel-img">
+  </div>
+
+</div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#wisataCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#wisataCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- PESAN / AMBIL PAKET -->
+<section class="section-padding bg-light">
+  <div class="container">
+    
+    <div class="text-center mb-5">
+      <h2 class="section-title">Ambil Paket Wisata</h2>
+      <p class="text-muted">
+        Tertarik dengan paket kami? Silakan isi form pemesanan di bawah ini.
+      </p>
+    </div>
+
+    <div class="order-section shadow">
+      <form>
+        <div class="row g-4">
+
+          <div class="col-md-6">
+            <label>Nama Depan</label>
+            <input type="text" class="form-control" placeholder="Nama depan">
+          </div>
+
+          <div class="col-md-6">
+            <label>Nama Belakang</label>
+            <input type="text" class="form-control" placeholder="Nama belakang">
+          </div>
+
+          <div class="col-md-6">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="email@email.com">
+          </div>
+
+          <div class="col-md-6">
+            <label>Pilih Paket Wisata</label>
+            <select class="form-select">
+              <option selected disabled>Pilih paket</option>
+              <option>Paket Wisata Alam Bandung</option>
+              <option>Paket Tour Bahari Bandung 2D1N</option>
+              <option>Paket Wisata Budaya Bandung 2D1N</option>
+              <option>Paket Wisata Mix Bandung</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label>Catatan Pemesanan</label>
+            <textarea rows="5" class="form-control" placeholder="Tulis permintaan khusus atau pertanyaan Anda..."></textarea>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn-order">
+              Kirim Permintaan Paket
+            </button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONI (DI BAWAH, SEBELUM FOOTER) -->
+<section id="ulasan" class="testimoni-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-white">Testimoni Pelanggan</h2>
+      <p class="text-light opacity-75">
+        Apa kata mereka yang sudah menjelajah bersama kami?
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Testimoni 1 -->
+      <div class="col-md-6">
+        <div class="testimoni-card">
+          <img src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2021/08/13/cover-raffijpg-20210813071219.jpg" alt="Raffi">
+          <div>
+            <h5>Raffi Ahmad</h5>
+            <p>
+              “Explore Wisata Nusantara benar-benar memudahkan perencanaan liburan keluarga kami. Banyak pilihan wisata dan penjelasannya jelas.”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimoni 2 -->
+      <div class="col-md-6">
+        <div class="testimoni-card">
+          <img src="https://awsimages.detik.net.id/community/media/visual/2024/10/16/zee-asadel_169.jpeg?w=700&q=90" alt="Zee">
+          <div>
+            <h5>Zee Asadel</h5>
+            <p>
+              “Saya suka dengan fitur paket wisata dan ulasan pengunjungnya. Membuat saya lebih yakin sebelum memilih destinasi liburan. Website-nya modern dan responsif.”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimoni 3 -->
+      <div class="col-md-6">
+        <div class="testimoni-card">
+          <img src="https://people.com/thmb/8UmJvG7_CWh1cXukFXphbXYoFgc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(674x29:676x31)/taylor-swift-031623-c081f6b0240b42f39b89c8990ca350c1.jpg" alt="Taylor">
+          <div>
+            <h5>Taylor Swift</h5>
+            <p>
+              “Explore Wisata Nusantara is an amazing platform to discover Indonesia’s hidden gems. The website is well-designed, easy to navigate, and very informative.”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimoni 4 -->
+      <div class="col-md-6">
+        <div class="testimoni-card">
+          <img src="https://i.ytimg.com/vi/c6PxEKuJXRs/maxresdefault.jpg" alt="Ariana">
+          <div>
+            <h5>Ariana Grande</h5>
+            <p>
+              “This website provides a great travel experience. The information is clear, updated, and beautifully presented. Highly recommended for travelers!”
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 text-center">
+<p class="mb-0">&copy; 2026 ExploreWisata | Explore Wisata Nusantara</p>
+</footer>
+
+<script src="assets/assets/js/bootstrap.min.js"></script>
+<script src="assets/assets/js/bootstrap.bundle.js"></script>
+</body>
+</html>
