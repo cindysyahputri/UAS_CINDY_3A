@@ -19,8 +19,6 @@ body{
   scroll-behavior:smooth;
 }
 
-
-/* NAVBAR */
 .navbar{
   background:rgba(20,40,30,.95);
   backdrop-filter:blur(8px);
@@ -49,7 +47,6 @@ body{
   width:100%;
 }
 
-/* HERO */
 .hero{
   background:linear-gradient(rgba(20,40,30,.65),rgba(20,40,30,.65)),
   url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
@@ -59,7 +56,6 @@ body{
   padding:150px 0;
 }
 
-/* SECTION */
 .section-padding{
   padding:50px 0;
 }
@@ -68,7 +64,6 @@ body{
   font-weight:700;
 }
 
-/* CARD */
 .card{
   border:none;
   border-radius:18px;
@@ -84,7 +79,6 @@ body{
   box-shadow:0 15px 35px rgba(0,0,0,.12);
 }
 
-/* CAROUSEL */
 .carousel-custom{
   max-width:900px;
 }
@@ -93,7 +87,6 @@ body{
   object-fit:cover;
 }
 
-/* SECTION TESTIMONI */
 .testimoni-section {
   padding: 100px 0;
   background: rgba(20,40,30,.95);
@@ -144,7 +137,6 @@ body{
   line-height: 1.6;
 }
 
-/* FORM */
 .form-control{
   border-radius:12px;
   padding:12px;
@@ -155,7 +147,6 @@ body{
   font-weight:600;
 }
 
-/* PESAN PAKET */
 .order-section{
   background:rgba(20,40,30,.95);
   border-radius:20px;
@@ -192,7 +183,6 @@ body{
   color:#1c2e25;
 }
 
-/* FOOTER */
 footer{
   background:rgba(0, 0, 0, 0.95);
   color:#ccc;
@@ -201,7 +191,6 @@ footer{
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#home">ExploreWisata</a>
@@ -220,7 +209,6 @@ footer{
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="home" class="hero text-center">
   <div class="container">
     <h1 class="display-4 fw-bold">Explore Wisata Nusantara</h1>
@@ -228,7 +216,6 @@ footer{
   </div>
 </section>
 
-<!-- TENTANG -->
 <section id="intro" class="section-padding bg-white">
   <div class="container text-center">
     <h2 class="section-title mb-4">
@@ -254,8 +241,6 @@ footer{
   </div>
 </section>
 
-
-<!-- DESTINASI -->
 <section id="destinasi" class="section-padding">
   <div class="container">
     <h2 class="section-title text-center mb-5">Jenis Destinasi Wisata</h2>
@@ -301,7 +286,6 @@ footer{
  
   </section>
 
-<!-- PAKET -->
 <section id="paket" class="section-padding bg-white">
   <div class="container">
     <h2 class="section-title text-center mb-3">Paket Wisata Pilihan</h2>
@@ -338,7 +322,6 @@ footer{
 </div>
 </section>
 
-<!-- PESAN / AMBIL PAKET -->
 <section class="section-padding bg-light">
   <div class="container">
     
@@ -353,14 +336,9 @@ footer{
       <form>
         <div class="row g-4">
 
-          <div class="col-md-6">
-            <label>Nama Depan</label>
-            <input type="text" class="form-control" placeholder="Nama depan">
-          </div>
-
-          <div class="col-md-6">
-            <label>Nama Belakang</label>
-            <input type="text" class="form-control" placeholder="Nama belakang">
+          <div class="col-12">
+            <label>Nama Lengkap</label>
+            <input type="text" class="form-control" placeholder="Nama lengkap">
           </div>
 
           <div class="col-md-6">
@@ -397,7 +375,6 @@ footer{
   </div>
 </section>
 
-<!-- TESTIMONI (DI BAWAH, SEBELUM FOOTER) -->
 <section id="ulasan" class="testimoni-section">
   <div class="container">
     <div class="text-center mb-5">
@@ -408,7 +385,6 @@ footer{
     </div>
 
     <div class="row g-4">
-      <!-- Testimoni 1 -->
       <div class="col-md-6">
         <div class="testimoni-card">
           <img src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2021/08/13/cover-raffijpg-20210813071219.jpg" alt="Raffi">
@@ -421,7 +397,6 @@ footer{
         </div>
       </div>
 
-      <!-- Testimoni 2 -->
       <div class="col-md-6">
         <div class="testimoni-card">
           <img src="https://awsimages.detik.net.id/community/media/visual/2024/10/16/zee-asadel_169.jpeg?w=700&q=90" alt="Zee">
@@ -434,7 +409,6 @@ footer{
         </div>
       </div>
 
-      <!-- Testimoni 3 -->
       <div class="col-md-6">
         <div class="testimoni-card">
           <img src="https://people.com/thmb/8UmJvG7_CWh1cXukFXphbXYoFgc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(674x29:676x31)/taylor-swift-031623-c081f6b0240b42f39b89c8990ca350c1.jpg" alt="Taylor">
@@ -447,7 +421,6 @@ footer{
         </div>
       </div>
 
-      <!-- Testimoni 4 -->
       <div class="col-md-6">
         <div class="testimoni-card">
           <img src="https://i.ytimg.com/vi/c6PxEKuJXRs/maxresdefault.jpg" alt="Ariana">
@@ -463,9 +436,8 @@ footer{
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="py-4 text-center">
-<p class="mb-0">&copy; 2026 ExploreWisata | Explore Wisata Nusantara</p>
+  <p class="mb-0">&copy; 2026 ExploreWisata | Explore Wisata Nusantara</p>
 </footer>
 
 <script src="assets/assets/js/bootstrap.min.js"></script>
